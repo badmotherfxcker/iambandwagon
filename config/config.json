@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "denis",
+    "password": "fuckyou",
+    "database": "iambandwagon-dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "iambandwagon-test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "iambandwagon-production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
