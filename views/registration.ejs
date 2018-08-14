@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration of new bandwagon on <%= title %></title>
+    <% include templates/head.ejs%>
+</head>
+<body class="w3-light-grey">
+
+<% include templates/menu.ejs%>
+
+<div class="w3-container w3-margin">
+
+    <p></p>
+
+    <div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-button tablink w3-black" onclick="openTab(event,'Login')">Login</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'Register')">Register</button>
+    </div>
+
+
+    <div id="Login" class="w3-container w3-border tab">
+        <form action="/action_page.php">
+            <h2 class="w3-text-black">Login</h2>
+            <p>Please enter your username and password</p>
+            <p>
+                <label class="w3-text-black"><b>Username</b></label>
+                <input class="w3-input w3-border" name="first" type="text"></p>
+            <p>
+                <label class="w3-text-black"><b>Password</b></label>
+                <input class="w3-input w3-border" name="last" type="text"></p>
+            <input class="w3-check" type="checkbox">
+            <label>Remember me</label>
+            <p>
+                <button class="w3-btn w3-black">Login</button></p>
+        </form>
+    </div>
+
+    <div id="Register" class="w3-container w3-border tab" style="display:none">
+        <form action="/action_page.php">
+            <h2 class="w3-text-black">Register</h2>
+            <p>Please enter your username, email and password</p>
+            <p>
+                <label class="w3-text-black"><b>Username</b></label>
+                <input class="w3-input w3-border" name="first" type="text"></p>
+            <p>
+                <label class="w3-text-black"><b>Email</b></label>
+                <input class="w3-input w3-border" name="last" type="text"></p>
+            <p>
+                <label class="w3-text-black"><b>Password</b></label>
+                <input class="w3-input w3-border" name="last" type="text"></p>
+            <p>
+                <label class="w3-text-black"><b>Confirm password</b></label>
+                <input class="w3-input w3-border" name="last" type="text"></p>
+            <p>
+                <button class="w3-btn w3-black">Register</button></p>
+        </form>
+    </div>
+
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("tab");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-black", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " w3-black";
+    }
+</script>
+
+
+</body>
